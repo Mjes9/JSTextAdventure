@@ -1,0 +1,68 @@
+alert("Welcome to my game: Your Cat Is Missing!");
+let ans = prompt("Do you own a cat?");
+
+if (ans == "yes") {
+    alert("Okay, good.");
+} else {
+    alert("Well, idk why you're here then, but whatever.")
+}
+
+let catTrust = 0
+let hasCat = false
+let dangerValue = 0
+let cash = 100
+ 
+let start = prompt("Press E to Start. Any other key to exit:");
+if (start == "E") {
+    alert("Today is Saturday, the 4th of March, and the perfect day that your cat's vet decided you should take your cat for a checkup. Buuut, you're really stupid and you make the mistake of being honest with your cat by telling it about the appointment. Your cat does some sneaky maneuvers (a few backflips, some defying of gravity, etc.) and manages to slip out of the house. OH NO, YOUR CAT IS MISSING! WHAT SHALL YOU DO?");
+} else {
+    alert("Goodbye!")
+    throw new Error("Goodbye")
+}
+let ans1 = prompt("A. Find cat food and shake the container (You know your cat is way too smart to fall for that.)  B. Your cat's still in sight! Try to chase your cat down the street?")
+
+let ans2 = 0
+let ans3 = 0
+let ans4 = 0
+
+//Question 1
+if (ans1 == "A") {
+    alert("You find the cat food and shake the container outside while saying \"Here, kitty kitty!\"")
+
+    alert("You accidentally attract something else instead.... A RACCOON! The raccoon becomes your new pet and you both live happily ever after! Wait, what was it you were looking for again...?")
+
+    alert("Ending Unlocked: \"What's a cat?\"");
+    throw new Error("Goodbye")
+} else if (ans1 == "B") {
+    alert("You chase your cat down the block. Your cat hops onto a tall fence and waves its paws tauntingly before jumping down on the other side into an alleyway. Dang it, you lost the cat! What now?");
+//Question 2
+    ans2 = prompt("A. Try to climb the fence?  B. BREAK IT DOWNNNNN!!!!!!");
+    if (ans2 == "B") {
+        alert("Uhhh oh.... Turns out that fence was private property! Now you're getting arrested. Maybe your cat will come back to bail you out of jail...? Probably not...")
+        alert("Ending Unlocked: \"Kitty, I'm a criminal!\"");
+        throw new Error("Goodbye")
+    } else if (ans2 == "A") {
+            alert("You successfully climb over the fence and spot your cat's tail swishing around the corner. You sneak around and notice your cat walking on two legs. \"What the heck is this? Garfield???\" What do you do???")
+            dangerValue = 50
+            ans3 = prompt("A. Confront your cat?  B. Continue to follow your cat in secret");
+    } else {
+    alert("Not an answer")
+    throw new Error("Goodbye")
+    }
+}
+
+
+//Question 3
+if (ans3 = "A") {
+    dangerValue = 100
+    alert("You confront your cat. \"Kitty, what's going on? I knew you were smart, but this just isn't natural!!\"")
+    alert("Your cat slowly turns its head 180 degrees to face you. \"You stupid stupid mortal! You have broken the laws of THE GREAT ORDER by seeing me this way! I have no other choice now but to DESTROY YOU! This is what you get for wanting to take me to the vet, anyway!\" Your cat levitates into the air and vaporizes you with a beam of light.")
+    alert("Ending Unlocked: The Great Order")
+    throw new Error("Goodbye")
+}
+//Question 4
+if (ans3 = "B") {
+    dangerValue = 20
+    alert("You follow your cat, and as it leaves the alleyway, you notice it return to walking on all fours. That was weird. You're pretty close to the cat now, though... What do you want to do?")
+    ans4 = prompt("A. Try to talk it out with your cat?  B. Attempt to capture your cat and go to the vet.")
+}
