@@ -24,6 +24,7 @@ let ans1 = prompt("A. Find cat food and shake the container (You know your cat i
 let ans2 = 0
 let ans3 = 0
 let ans4 = 0
+let ans5 = 0
 
 //Question 1
 if (ans1 == "A") {
@@ -44,25 +45,58 @@ if (ans1 == "A") {
     } else if (ans2 == "A") {
             alert("You successfully climb over the fence and spot your cat's tail swishing around the corner. You sneak around and notice your cat walking on two legs. \"What the heck is this? Garfield???\" What do you do???")
             dangerValue = 50
-            ans3 = prompt("A. Confront your cat?  B. Continue to follow your cat in secret");
-    } else {
-    alert("Not an answer")
-    throw new Error("Goodbye")
-    }
-}
-
 
 //Question 3
-if (ans3 = "A") {
-    dangerValue = 100
-    alert("You confront your cat. \"Kitty, what's going on? I knew you were smart, but this just isn't natural!!\"")
-    alert("Your cat slowly turns its head 180 degrees to face you. \"You stupid stupid mortal! You have broken the laws of THE GREAT ORDER by seeing me this way! I have no other choice now but to DESTROY YOU! This is what you get for wanting to take me to the vet, anyway!\" Your cat levitates into the air and vaporizes you with a beam of light.")
-    alert("Ending Unlocked: The Great Order")
-    throw new Error("Goodbye")
-}
+            ans3 = prompt("A. Confront your cat?  B. Continue to follow your cat in secret");
+
+            if (ans3 == "A") {
+            dangerValue = 100
+            alert("You confront your cat. \"Kitty, what's going on? I knew you were smart, but this just isn't natural!!\"")
+            alert("Your cat slowly turns its head 180 degrees to face you. \"You stupid stupid mortal! You have broken the laws of THE GREAT ORDER by seeing me this way! I have no other choice now but to DESTROY YOU! This is what you get for wanting to take me to the vet, anyway!\" Your cat levitates into the air and vaporizes you with a beam of light.");
+            alert("Ending Unlocked: The Great Order");
+        } else if (ans3 == "B") {
+            dangerValue = 20
+            alert("You follow your cat, and as it leaves the alleyway, you notice it return to walking on all fours. That was weird. You're pretty close to the cat now, though... What do you want to do?");
+
 //Question 4
-if (ans3 = "B") {
-    dangerValue = 20
-    alert("You follow your cat, and as it leaves the alleyway, you notice it return to walking on all fours. That was weird. You're pretty close to the cat now, though... What do you want to do?")
-    ans4 = prompt("A. Try to talk it out with your cat?  B. Attempt to capture your cat and go to the vet.")
-}
+            ans4 = prompt("A. Try to talk it out with your cat?  B. Attempt to capture your cat and go to the vet.");
+
+            if (ans4 == "A") {
+                dangerValue = 10
+                alert("\"Hey, Kitty! Wait, don't run! I promise the vet isn't going to hurt you, bro. Please can we just talk this out? I'll get you your favorite snack afterwards!\"")
+                ans5 = prompt("Your cat turns around and looks at you. You almost think you hear a voice saying \"NO.\" echo in your mind. Your cat turns back around and keeps going. How will you convince your cat?")
+                if (ans5 == "A") {
+                    alert("")
+
+                } else if (ans5 == "B") {
+                    alert("")
+
+                } else {
+                    alert("Not an answer")
+                    throw new Error("Goodbye")
+                }
+
+            } else if (ans4 == "B") {
+                dangerValue = 1000
+                alert("You reach out and grab your cat. Your cat is very VERY angry about this. The cat turns it's head 180 degrees and stares into your soul. Creeped out, you drop the cat.")
+                alert("Your cat vanishes. You blink and notice you have been transported to a strange place...")
+                alert("You are in a dark place, and as you observe your surroundings, your eyes start to adjust. You notice strange beings lurking in the shadows, and in front of you... Your cat. Staring with glowing red eyes.") 
+                alert("The fear and shock in your body is overwhelming, but you stand your ground. This place is so quiet that you can hear your own staggered breathing and busy heart beat...");
+            }
+
+        } else {
+            alert("Not an answer")
+            throw new Error("Goodbye")
+        }
+
+        } 
+        
+    } else {
+        alert("Not an answer")
+        throw new Error("Goodbye")
+    }
+    
+    
+    //Question 3
+    
+    
