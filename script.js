@@ -1,7 +1,11 @@
-alert("Welcome to my game: Your Cat Is Missing!");
+let nam = prompt("What is your name?")
+let welcome = `Welcome ${nam}! This is my game: Your Cat Is Missing!.`;
+alert(welcome);
+
+//alert("Welcome to my game: Your Cat Is Missing!");
 let ans = prompt("Do you own a cat?");
 
-if (ans == "yes") {
+if (ans == "yes" || ans == "Yes" || ans == "YES") {
     alert("Okay, good.");
 } else {
     alert("Well, idk why you're here then, but whatever.")
@@ -19,29 +23,30 @@ if (start == "E") {
     alert("Goodbye!")
     throw new Error("Goodbye")
 }
-let ans1 = prompt("A. Find cat food and shake the container (You know your cat is way too smart to fall for that.)  B. Your cat's still in sight! Try to chase your cat down the street?")
+let ans1 = prompt("A. Find cat food and shake the container (You know your cat is way too smart to fall for that.)  B. Your cat's still in sight! Try to chase your cat down the street?").toUpperCase()
 
-let ans2 = 0
-let ans3 = 0
-let ans4 = 0
-let ans5 = 0
+
+let ans2 = 0;
+let ans3 = 0;
+let ans4 = 0;
+let ans5 = 0;
 
 //Question 1
 if (ans1 == "A") {
-    alert("You find the cat food and shake the container outside while saying \"Here, kitty kitty!\"")
+    alert("You find the cat food and shake the container outside while saying \"Here, kitty kitty!\"");
 
-    alert("You accidentally attract something else instead.... A RACCOON! The raccoon becomes your new pet and you both live happily ever after! Wait, what was it you were looking for again...?")
+    alert("You accidentally attract something else instead.... A RACCOON! The raccoon becomes your new pet and you both live happily ever after! Wait, what was it you were looking for again...?");
 
     alert("Ending Unlocked: \"What's a cat?\"");
-    throw new Error("Goodbye")
+    throw new Error("Goodbye");
 } else if (ans1 == "B") {
     alert("You chase your cat down the block. Your cat hops onto a tall fence and waves its paws tauntingly before jumping down on the other side into an alleyway. Dang it, you lost the cat! What now?");
 //Question 2
     ans2 = prompt("A. Try to climb the fence?  B. BREAK IT DOWNNNNN!!!!!!");
     if (ans2 == "B") {
-        alert("Uhhh oh.... Turns out that fence was private property! Now you're getting arrested. Maybe your cat will come back to bail you out of jail...? Probably not...")
+        alert("Uhhh oh.... Turns out that fence was private property! Now you're getting arrested. Maybe your cat will come back to bail you out of jail...? Probably not...");
         alert("Ending Unlocked: \"Kitty, I'm a criminal!\"");
-        throw new Error("Goodbye")
+        throw new Error("Goodbye");
     } else if (ans2 == "A") {
             alert("You successfully climb over the fence and spot your cat's tail swishing around the corner. You sneak around and notice your cat walking on two legs. \"What the heck is this? Garfield???\" What do you do???")
             dangerValue = 50
@@ -64,9 +69,12 @@ if (ans1 == "A") {
             if (ans4 == "A") {
                 dangerValue = 10
                 alert("\"Hey, Kitty! Wait, don't run! I promise the vet isn't going to hurt you, bro. Please can we just talk this out? I'll get you your favorite snack afterwards!\"")
-                ans5 = prompt("Your cat turns around and looks at you. You almost think you hear a voice saying \"NO.\" echo in your mind. Your cat turns back around and keeps going. How will you convince your cat?")
+                ans5 = prompt("Your cat turns around and looks at you. You almost think you hear a voice saying \"NO.\" echo in your mind. Your cat turns back around and keeps going. How will you convince your cat? A. Offer a deal your cat couldn't possibly resist.  B. Give up and cancel the appointment.")
                 if (ans5 == "A") {
-                    alert("")
+                    alert("You offer a deal...")
+                    alert("\"Alright, Kitty, I have an idea. If you agree to go to the vet, we can form a brilliant plan together to embarrass him in front of his wife.\"")
+                    alert("Your cat slowly turns back to look at you. It nods and starts walking to the vet. You walk alongside your cat as you form the plan. You sigh in relief. Finally.")
+                    alert("You arrive just in time for the appointment. The veterinarian greets you and your cat with a smile. This feels wrong. But your cat looks... a little too happy about this plan.".italics())
 
                 } else if (ans5 == "B") {
                     alert("")
