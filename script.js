@@ -2,21 +2,22 @@ let nam = prompt("What is your name?")
 let welcome = `Welcome ${nam}! This is my game: Your Cat Is Missing!.`;
 alert(welcome);
 
-//alert("Welcome to my game: Your Cat Is Missing!");
-let ans = prompt("Do you own a cat?");
+let catTrust = 0
+let catHealth = 200
+let hasCat = true
+let dangerValue = 0
+let cash = 100
+let health = 100
 
+let ans = prompt("Do you own a cat?");
 if (ans == "yes" || ans == "Yes" || ans == "YES") {
     alert("Okay, good.");
 } else {
     alert("Well, idk why you're here then, but whatever.")
+    hasCat = false
 }
-
-let catTrust = 0
-let hasCat = false
-let dangerValue = 0
-let cash = 100
  
-let start = prompt("Press E to Start. Any other key to exit:");
+let start = prompt("Press E to Start. Any other key to exit:").toUpperCase();
 if (start == "E") {
     alert("Today is Saturday, the 4th of March, and the perfect day that your cat's vet decided you should take your cat for a checkup. Buuut, you're really stupid and you make the mistake of being honest with your cat by telling it about the appointment. Your cat does some sneaky maneuvers (a few backflips, some defying of gravity, etc.) and manages to slip out of the house. OH NO, YOUR CAT IS MISSING! WHAT SHALL YOU DO?");
 } else {
@@ -103,25 +104,26 @@ if (ans1 == "A") {
                 alert("The fear and shock in your body is overwhelming, but you stand your ground. This place is so quiet that you can hear your own staggered breathing and busy heart beat...");
                 alert("\"You have tormented me for the last time, foul human. Your time will come soon, but I think I deserve to have some fun first...\"")
                 alert("Your cat levitates into the air. The red glow of magma starts to appear from the ground around you. A battle arena is formed.")
-                alert("\"I will make you regret ever keeping a pet. This existence is humiliating, and now it's time I humiliated you!\" The battle begins. Your cat summons fire from the ground. This is a D&D style battle, so go ahead and pres OK to roll your dice.")
+                alert("\"I will make you regret ever keeping a pet. This existence is humiliating, and now it's time I humiliated you!\" The battle begins. Your cat summons fire from the ground. This is a D&D style battle, so go ahead and press OK to roll your dice.")
                 let eventRoll = Math.floor(Math.random() * 3) + 1;
                 
                 switch (eventRoll) {
                     case 1:
-                        alert("You rolled a 10 or lower. You get a health boost! \n +10 HP")
+                        alert("You rolled between a 6 and a 10. You get a health boost! \n +10 HP")
                         health += 10; 
                         break;
                     case 2:
                         alert("You rolled a 15 or higher. You find the strength within you to attack your own pet. You throw a punch at your cat's belly.")
-                        catHealth -= 5; // dropped wallet
+                        catHealth -= 5; //
                         break;
                     case 3:
-                        alert("")
-                        reputation += 1; // got a tip
+                        alert("You rolled a 5 or lower. You fail to do anything and your cat shoots fire at you.")
+                        health -= 10; 
                         break;
                     default:
                         // should not happen
                         break;
+                
 
 
             }
