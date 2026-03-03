@@ -9,8 +9,8 @@ let dangerValue = 0
 let cash = 100
 let health = 100
 
-let ans = prompt("Do you own a cat?");
-if (ans == "yes" || ans == "Yes" || ans == "YES") {
+let ans = prompt("Do you own a cat?").trimEnd();
+if (ans == "yes") {
     alert("Okay, good.");
 } else {
     alert("Well, idk why you're here then, but whatever.")
@@ -39,6 +39,7 @@ if (ans1 == "A") {
     alert("You accidentally attract something else instead.... A RACCOON! The raccoon becomes your new pet and you both live happily ever after! Wait, what was it you were looking for again...?");
 
     alert("Ending Unlocked: \"What's a cat?\"");
+    alert("Reload the tab to play again.")
     throw new Error("Goodbye");
 } else if (ans1 == "B") {
     alert("You chase your cat down the block. Your cat hops onto a tall fence and waves its paws tauntingly before jumping down on the other side into an alleyway. Dang it, you lost the cat! What now?");
@@ -47,6 +48,7 @@ if (ans1 == "A") {
     if (ans2 == "B") {
         alert("Uhhh oh.... Turns out that fence was private property! Now you're getting arrested. Maybe your cat will come back to bail you out of jail...? Probably not...");
         alert("Ending Unlocked: \"Kitty, I'm a criminal!\"");
+        hasCat == false ? alert("Wait, you don't have a cat. You're sitting at home on your couch, not in a jail cell! \n Reload the tab to play again."): alert("Reload the tab to play again.");
         throw new Error("Goodbye");
     } else if (ans2 == "A") {
             alert("You successfully climb over the fence and spot your cat's tail swishing around the corner. You sneak around and notice your cat walking on two legs. \"What the heck is this? Garfield???\" What do you do???")
@@ -60,6 +62,7 @@ if (ans1 == "A") {
             alert("You confront your cat. \"Kitty, what's going on? I knew you were smart, but this just isn't natural!!\"")
             alert("Your cat slowly turns its head 180 degrees to face you. \"You stupid stupid mortal! You have broken the laws of THE GREAT ORDER by seeing me this way! I have no other choice now but to DESTROY YOU! This is what you get for wanting to take me to the vet, anyway!\" Your cat levitates into the air and vaporizes you with a beam of light.");
             alert("Ending Unlocked: The Great Order");
+            hasCat == false ? alert("Wait, you don't have a cat! YOU'RE ALIVE! IT WAS ALL A DREAM! \n Reload the tab to play again."): alert("Reload the tab to play again.");
             throw new Error("Goodbye")
         } else if (ans3 == "B") {
             dangerValue = 20
@@ -82,6 +85,7 @@ if (ans1 == "A") {
                     alert("After a few moments, he is laying on the ground writhing in pain. Oopsie. Looks like the doctor needs a doctor now. ")
                     alert("Your cat does not stop. Eventually, the authorities come by and take your cat away to be contained and supervised for unnatural and suspicious activity.")
                     alert("Ending Unlocked: Supernatural \"Cat\"")
+                    hasCat == false ? alert("Wait, you don't have a cat. Did this ever really happen? \n Reload the tab to play again."): alert("Reload the tab to play again.");
                     throw new Error("Goodbye")
 
                 } else if (ans5 == "B") {
@@ -89,8 +93,9 @@ if (ans1 == "A") {
                     alert("\"Okay, fine. We can cancel the appointment and go home\"")
                     alert("Your cat looks satisfied with this. You return home and watch horror movies together. ")
                     alert("Ending Unlocked: Happy... Cat?")
+                    hasCat == false ? alert("Wait, you don't have a cat. Did this ever really happen? \n Reload the tab to play again."): alert("Reload the tab to play again.");
                     throw new Error("Goodbye")
-
+ 
                 } else {
                     alert("Not an answer")
                     throw new Error("Goodbye")
@@ -105,20 +110,21 @@ if (ans1 == "A") {
                 alert("\"You have tormented me for the last time, foul human. Your time will come soon, but I think I deserve to have some fun first...\"")
                 alert("Your cat levitates into the air. The red glow of magma starts to appear from the ground around you. A battle arena is formed.")
                 alert("\"I will make you regret ever keeping a pet. This existence is humiliating, and now it's time I humiliated you!\" The battle begins. Your cat summons fire from the ground. This is a D&D style battle, so go ahead and press OK to roll your dice.")
-                let eventRoll = Math.floor(Math.random() * 3) + 1;
+                let eventRoll = Math.floor(Math.random() * 20) + 1;
                 
-                switch (eventRoll) {
-                    case 1:
+                switch (true) {
+                    case eventRoll <= 5:
+                        alert("You rolled a 5 or lower. You fail to do anything and your cat shoots fire at you.")
+                        health -= 10; 
+                        break;
+                    case eventRoll <= 10:
                         alert("You rolled between a 6 and a 10. You get a health boost! \n +10 HP")
                         health += 10; 
                         break;
-                    case 2:
+                    case eventRoll >= 11:
                         alert("You rolled a 15 or higher. You find the strength within you to attack your own pet. You throw a punch at your cat's belly.")
+                        alert("")
                         catHealth -= 5; //
-                        break;
-                    case 3:
-                        alert("You rolled a 5 or lower. You fail to do anything and your cat shoots fire at you.")
-                        health -= 10; 
                         break;
                     default:
                         // should not happen
@@ -141,6 +147,7 @@ if (ans1 == "A") {
     }
     
     
-    //Question 3
     
 }
+
+//This is not finished :(
