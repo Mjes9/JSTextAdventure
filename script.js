@@ -9,7 +9,7 @@ let dangerValue = 0
 let cash = 100
 let health = 100
 
-let ans = prompt("Do you own a cat?").trimEnd();
+let ans = prompt("Do you own a cat?").toLowerCase().trim();
 if (ans == "yes") {
     alert("Okay, good.");
 } else {
